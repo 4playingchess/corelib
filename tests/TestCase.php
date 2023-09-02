@@ -53,11 +53,8 @@ abstract class TestCase extends Orchestra
      */
     protected function getPackageProviders($app)
     {
-        return $this->getLaravelVersion() < 9 ? [
-            PermissionServiceProvider::class,
-        ] : [
-            PermissionServiceProvider::class,
-            PassportServiceProvider::class,
+        return [
+            FourPlayingChess\CoreLib\FourPlayingChessServiceProvider::class,
         ];
     }
 
