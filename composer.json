@@ -26,9 +26,6 @@
     "psr-4": {
       "Tests\\": "tests/"
     },
-    "classmap": [
-      "vendor/laravel/laravel/tests/TestCase.php"
-    ],
     "files": [
       "tests/helpers.php"
     ]
@@ -44,5 +41,9 @@
       ]
     }
   },
-  "minimum-stability": "stable"
+  "minimum-stability": "stable",
+  "prefer-stable": true,
+  "scripts": {
+    "test": "phpunit"
+  }
 }
