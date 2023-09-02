@@ -16,7 +16,7 @@
     "orchestra/testbench": "^6.23|^7.0|^8.0",
     "phpunit/phpunit": "^9.4"
   },
-  "license": "proprietary",
+  "license": "MIT",
   "authors": [
     {
       "name": "Nicholas English",
