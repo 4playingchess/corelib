@@ -8,12 +8,14 @@
  *
  * @return \Illuminate\Database\Eloquent\Collection|\App\User[]|\App\User
  */
-function createUser($overrides = [], $amount = 1)
-{
-    $users = factory(\App\User::class, $amount)->create($overrides);
-    if (count($users) == 1) {
-        return $users->first();
+if (!function_exists('createUser')) {
+    function createUser($overrides = [], $amount = 1)
+    {
+        $users = factory(\App\User::class, $amount)->create($overrides);
+        if (count($users) == 1) {
+            return $users->first();
+        }
+    
+        return $users;
     }
-
-    return $users;
 }
