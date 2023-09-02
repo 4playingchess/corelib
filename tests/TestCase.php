@@ -38,9 +38,6 @@ abstract class TestCase extends Orchestra
             $this->prepareMigration();
         }
         $this->setUpDatabase($this->app);
-        if ($this->hasTeams) {
-            setPermissionsTeamId(1);
-        }
         if ($this->usePassport) {
             $this->setUpPassport($this->app);
         }
