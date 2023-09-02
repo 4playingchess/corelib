@@ -81,7 +81,7 @@ class FourPlayingChessServiceProvider extends ServiceProvider
     protected function updateMigrationDate(): array
     {
         $tempArray = [];
-        $path = __DIR__.'/../database/migrations';
+        $path = __DIR__.'/../migrations';
         foreach (\File::allFiles($path) as $file) {
             $tempArray[$path.'/'.\File::basename($file)] = app()->databasePath()."/migrations/".date('Y_m_d_His').'_'.\File::basename($file);
         }
