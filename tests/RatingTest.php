@@ -12,6 +12,7 @@ class RatingsTest extends TestCase
     {
         // expected constant k factor.
         // assuming a constant of 32.
+        $rating = new Rating();
         
         // initialize basic team ratings.
         $teamRY = new Team(1500, 1520);
