@@ -46,11 +46,11 @@ class RatingsTest extends TestCase
         $actualScoreA = 0;
         $actualScoreB = 1;
         
-        $expectedWinBGCol1 = 1487.6203782449;
-        $expectedWinBGCol2 = 1507.6203782449;
+        $expectedLossRYCol1 = 1487.6203782449;
+        $expectedLossRYCol2 = 1507.6203782449;
         
-        $expectedLossRYCol1 = 1592.3796217551;
-        $expectedLossRYCol2 = 1612.3796217551;
+        $expectedWinBGCol1 = 1592.3796217551;
+        $expectedWinBGCol2 = 1612.3796217551;
 
         $teamRY->updatePlayers($actualScoreA, $expectedA, $rating);
         $teamBG->updatePlayers($actualScoreB, $expectedB, $rating);
