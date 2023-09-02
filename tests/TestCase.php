@@ -54,7 +54,7 @@ abstract class TestCase extends Orchestra
     protected function getPackageProviders($app)
     {
         return [
-            FourPlayingChess\CoreLib\FourPlayingChessServiceProvider::class,
+            \FourPlayingChess\CoreLib\FourPlayingChessServiceProvider::class,
         ];
     }
 
