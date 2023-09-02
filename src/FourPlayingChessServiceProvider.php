@@ -30,7 +30,7 @@ class FourPlayingChessServiceProvider extends ServiceProvider
             ? count(\File::glob(database_path('migrations/*corelib*.php'))) === 0
             : $config['migrations'];
         if ($runMigrations) {
-            $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
+            $this->loadMigrationsFrom(__DIR__.'/../migrations');
         }
     }
 
@@ -67,7 +67,7 @@ class FourPlayingChessServiceProvider extends ServiceProvider
         if ($this->app->runningInConsole()) {
             $this->publishes([
                 __DIR__.'/../config/corelib.php' => config_path('corelib.php'),
-            ], 'acquaintances-config');
+            ], 'corelib-config');
             $this->publishes($this->updateMigrationDate(), 'corelib-migrations');
         }
     }
