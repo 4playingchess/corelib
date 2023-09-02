@@ -33,11 +33,11 @@ class RatingsTest extends TestCase
         $teamRY->updatePlayers($actualScoreA, $expectedA, $rating);
         $teamBG->updatePlayers($actualScoreB, $expectedB, $rating);
         
-        $this->assertEquals($expectedWinRYCol1, $teamRY[0]);
-        $this->assertEquals($expectedWinRYCol2, $teamRY[1]);
+        $this->assertEquals($expectedWinRYCol1, $teamRY->getPlayers()[0]);
+        $this->assertEquals($expectedWinRYCol2, $teamRY->getPlayers()[1]);
         
-        $this->assertEquals($expectedLossBGCol1, $teamBG[0]);
-        $this->assertEquals($expectedLossBGCol2, $teamBG[1]);
+        $this->assertEquals($expectedLossBGCol1, $teamBG->getPlayers()[0]);
+        $this->assertEquals($expectedLossBGCol2, $teamBG->getPlayers()[1]);
         
         // now calculate team RY loss.
         $teamRY = new Team(1500, 1520);
@@ -55,11 +55,11 @@ class RatingsTest extends TestCase
         $teamRY->updatePlayers($actualScoreA, $expectedA, $rating);
         $teamBG->updatePlayers($actualScoreB, $expectedB, $rating);
 
-        $this->assertEquals($expectedLossRYCol1, $teamRY[0]);
-        $this->assertEquals($expectedLossRYCol2, $teamRY[1]);
+        $this->assertEquals($expectedLossRYCol1, $teamRY->getPlayers()[0]);
+        $this->assertEquals($expectedLossRYCol2, $teamRY->getPlayers()[1]);
         
-        $this->assertEquals($expectedWinBGCol1, $teamBG[0]);
-        $this->assertEquals($expectedWinBGCol2, $teamBG[1]);
+        $this->assertEquals($expectedWinBGCol1, $teamBG->getPlayers()[0]);
+        $this->assertEquals($expectedWinBGCol2, $teamBG->getPlayers()[1]);
 
         // now calculate draws.
         $teamRY = new Team(1500, 1520);
@@ -77,11 +77,11 @@ class RatingsTest extends TestCase
         $teamRY->updatePlayers($actualScoreA, $expectedA, $rating);
         $teamBG->updatePlayers($actualScoreB, $expectedB, $rating);
 
-        $this->assertEquals($expectedDrawRYCol1, $teamRY[0]);
-        $this->assertEquals($expectedDrawRYCol2, $teamRY[1]);
+        $this->assertEquals($expectedDrawRYCol1, $teamRY->getPlayers()[0]);
+        $this->assertEquals($expectedDrawRYCol2, $teamRY->getPlayers()[1]);
         
-        $this->assertEquals($expectedDrawBGCol1, $teamBG[0]);
-        $this->assertEquals($expectedDrawBGCol2, $teamBG[1]);
+        $this->assertEquals($expectedDrawBGCol1, $teamBG->getPlayers()[0]);
+        $this->assertEquals($expectedDrawBGCol2, $teamBG->getPlayers()[1]);
         
         // initialize basic team ratings.
         // attempt 2 with new data.
