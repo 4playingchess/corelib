@@ -6,7 +6,7 @@ use Illuminate\Filesystem\Filesystem;
 use Illuminate\Support\Collection;
 use Illuminate\Support\ServiceProvider;
 
-class AcquaintancesServiceProvider extends ServiceProvider
+class FourPlayingChessServiceProvider extends ServiceProvider
 {
     /**
      * Bootstrap any application services.
