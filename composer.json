@@ -8,7 +8,7 @@
   "require-dev": {
     "laravel/passport": "^11.0",
     "orchestra/testbench": "^6.23|^7.0|^8.0",
-    "phpunit/phpunit": "^9.4",
+    "phpunit/phpunit": "^9.4"
   },
   "license": "proprietary",
   "authors": [
